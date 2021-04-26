@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bill-manager" />
+        <module name="service-scg" />
+        <module name="eureka-service-center" />
+        <module name="model-manager" />
+        <module name="user-manager" />
+        <module name="service-security" />
+        <module name="config-manager" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bill-manager" options="-parameters" />
+      <module name="config-manager" options="-parameters" />
+      <module name="eureka-service-center" options="-parameters" />
+      <module name="model-manager" options="-parameters" />
+      <module name="service-scg" options="-parameters" />
+      <module name="service-security" options="-parameters" />
+      <module name="user-manager" options="-parameters" />
+    </option>
+  </component>
+</project>

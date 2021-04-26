@@ -1,0 +1,26 @@
+#Eureka配置
+eureka:
+  instance:
+    #是否显示主机的IP
+    prefer-ip-address: true
+    client:
+      service- url:
+        # 指定 Eureka 服务 端 地址
+        defaultZone: http://localhost:8761/eureka/
+
+#配置服务器端口
+server:
+  port: 8090
+spring:
+  application:
+    name: service-scg
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: fsh-house
+          uri: lb://user-manager-service
+          predicates:
+            - Path=/user/**

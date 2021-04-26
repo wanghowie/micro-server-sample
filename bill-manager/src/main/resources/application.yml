@@ -1,0 +1,29 @@
+#配置服务器端口
+server:
+  port: 8083
+
+spring:
+  application:
+    name: bill-manager-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/bill?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#Eureka配置
+eureka:
+  instance:
+    #是否显示主机的IP
+    prefer-ip-address: true
+    client:
+      service- url:
+        # 指定 Eureka 服务 端 地址
+        defaultZone: http://localhost:8761/eureka/

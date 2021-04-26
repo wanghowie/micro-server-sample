@@ -1,0 +1,16 @@
+#配置服务器端口
+server:
+  port: 8099
+spring:
+  application:
+    name: service-security
+
+#Eureka配置
+eureka:
+  instance:
+    #是否显示主机的IP
+    prefer-ip-address: true
+    client:
+      service- url:
+        # 指定 Eureka 服务 端 地址
+        defaultZone: http://localhost:8761/eureka/
